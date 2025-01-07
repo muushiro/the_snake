@@ -117,11 +117,14 @@ def handle_keys(snake: Snake):
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_UP and snake.direction != (0, GRID_SIZE):
                 snake.next_direction = (0, -GRID_SIZE)
-            elif event.key == pygame.K_DOWN and snake.direction != (0, -GRID_SIZE):
+            elif (event.key == pygame.K_DOWN
+                  and snake.direction != (0, -GRID_SIZE)):
                 snake.next_direction = (0, GRID_SIZE)
-            elif event.key == pygame.K_LEFT and snake.direction != (GRID_SIZE, 0):
+            elif (event.key == pygame.K_LEFT
+                  and snake.direction != (GRID_SIZE, 0)):
                 snake.next_direction = (-GRID_SIZE, 0)
-            elif event.key == pygame.K_RIGHT and snake.direction != (-GRID_SIZE, 0):
+            elif (event.key == pygame.K_RIGHT
+                  and snake.direction != (-GRID_SIZE, 0)):
                 snake.next_direction = (GRID_SIZE, 0)
 
 
